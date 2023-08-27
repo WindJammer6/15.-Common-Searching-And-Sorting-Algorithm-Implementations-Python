@@ -23,4 +23,4 @@ if __name__ == '__main__':
     nums_list = [4, 9, 11, 17, 21, 25, 29, 32, 38]
     num_to_find = 32
     index = recursive_binary_search(nums_list, num_to_find)
-    print(f"Number found at index {index} using Recursive Binary Search")
+    print(f"Number found at index {index} using recursive Binary Search")
