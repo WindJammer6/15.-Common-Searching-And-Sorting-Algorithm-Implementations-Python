@@ -2,7 +2,7 @@
 A compilation of various common Searching and Sorting Algorithm implementations in Python. Add big o notation table too? and to the common data structure repo too add a big o notation table
 
 ## Thoughts on starting this compilation
-Searched the internet, however I haven't found a good compilation of the various common Data Structure implementations in Python. So I decided to make one for myself, or for anyone else who wish to use this compilation. Of course, every version of a Data Structure implementation is slightly different in terms of how they are implemented so if you wish to use the Data Structure Python implementations in this compilation for your personal projects you might need to have a understanding on how these implementations are created, so I strongly suggest you take a look at [codebasics' Youtube playlist on Data Structure and Algorithms](https://www.youtube.com/playlist?list=PLeo1K3hjS3uu_n_a__MI_KktGTLYopZ12) and [Amulya's Academy's Youtube channel](https://www.youtube.com/@AmulsAcademy) (for the Graph Data Structures Python implementation) that I got the Data Structure Python implementations from, or from looking at the seperate repository in my Github profile ['12.-Data-Structures-and-Algorithms-Learning-and-Practice-Python'](https://github.com/WindJammer6/12.-Data-Structures-and-Algorithms-Learning-and-Practice-Python)
+Searched the internet, however I haven't found a good compilation of the various common Searching and Sorting Algorithm implementations in Python. So I decided to make one for myself, or for anyone else who wish to use this compilation. Of course, every version of an algorithm implementation is slightly different in terms of how they are implemented so if you wish to use these Searching and Sorting Algorithm Python implementations in this compilation for your personal projects you might need to have a understanding on how these implementations are created, so I strongly suggest you take a look at [codebasics' Youtube playlist on Data Structure and Algorithms](https://www.youtube.com/playlist?list=PLeo1K3hjS3uu_n_a__MI_KktGTLYopZ12) that I got these Searching and Sorting Algorithm Python implementations from, or from looking at the seperate repository in my Github profile ['12.-Data-Structures-and-Algorithms-Learning-and-Practice-Python'](https://github.com/WindJammer6/12.-Data-Structures-and-Algorithms-Learning-and-Practice-Python)
 
 <ins>Disclaimer</ins>: Most of these Searching and Sorting Algorithm Python implementations are done by Dhaval Patel, founder of the Youtube channel [codebasics](https://www.youtube.com/@codebasics). I did not create these Searching and Sorting Algorithm Python implementations, I merely compiled them while making some minor changes to them. 
 
@@ -13,6 +13,7 @@ Searched the internet, however I haven't found a good compilation of the various
 ## Table of Contents
 Here are the common Searching and Sorting Algorithm Python implementations in this compilation:
 + [Code Description](#codedescription)
++ [Big O Notation of Time Complexity and Space Complexity for the Searching and Sorting Algorithms](#bigonotation)
    + [Searching Algorithms:](#searchingalgorithms)
       + [Linear Search (Searching Algorithm)](#linearsearch)
       + Binary Search (Searching Algorithm)
