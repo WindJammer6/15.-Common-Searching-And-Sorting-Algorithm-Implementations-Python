@@ -13,16 +13,19 @@ Searched the internet, however I haven't found a good compilation of the various
 ## Table of Contents
 Here are the common Searching and Sorting Algorithm Python implementations in this compilation:
 + [Code Description](#codedescription)
-   + [Linear Search (Searching Algorithm)](#linearsearch)
-   + Binary Search (Searching Algorithm)
-      + [Iterative Binary Search (Searching Algorithm)](#iterativebinarysearch)
-      + [Recursive Binary Search (Searching Algorithm)](#recursivebinarysearch)
-   + [Bubble Sort (Sorting Algorithm)](#bubblesort)
-   + [Quick Sort (Sorting Algorithm)](#quicksort)
-   + [Insertion Sort (Sorting Algorithm)](#insertionsort)  
-     -> [Shell Sort (Sorting Algorithm) (improved Insertion Sort Algorithm variation)](#shellsort)
-   + [Merge Sort (Sorting Algorithm)](#mergesort)
-   + [Selection Sort (Sorting Algorithm)](#selectionsort)
+   + [Searching Algorithms:](#searchingalgorithms)
+      + [Linear Search (Searching Algorithm)](#linearsearch)
+      + Binary Search (Searching Algorithm)
+         + [Iterative Binary Search (Searching Algorithm)](#iterativebinarysearch)
+         + [Recursive Binary Search (Searching Algorithm)](#recursivebinarysearch)
+
+   + [Sorting Algorithms:](#sortingalgorithms)
+      + [Bubble Sort (Sorting Algorithm)](#bubblesort)
+      + [Quick Sort (Sorting Algorithm)](#quicksort)
+      + [Insertion Sort (Sorting Algorithm)](#insertionsort)  
+        -> [Shell Sort (Sorting Algorithm) (improved Insertion Sort Algorithm variation)](#shellsort)
+      + [Merge Sort (Sorting Algorithm)](#mergesort)
+      + [Selection Sort (Sorting Algorithm)](#selectionsort)
         
 Notes: 
 - This compilation is not exhaustive and there are obviously other more advanced types of searching and sorting Algorithms that I feel are less beginner-friendly that I did not add to this compilation (e.g. Ternary Search Algorithm and Heap Sort Algorithm (improved Selection Sort Algorithm variation))
@@ -33,6 +36,9 @@ Notes:
 
 ## Code Description <a name = "codedescription"></a>
 
+<br>
+
+## Searching Algorithms <a name = "searchingalgorithms"></a>
 ### [Linear Search (Searching Algorithm)](https://github.com/WindJammer6/15.-Common-Searching-And-Sorting-Algorithm-Implementations-Python/blob/main/1.%20Linear_Search_(Searching_Algorithm).py) <a name = "linearsearch"></a>
 Here are the functions available in the ['1. Linear_Search_(Searching_Algorithm).py'](https://github.com/WindJammer6/15.-Common-Searching-And-Sorting-Algorithm-Implementations-Python/blob/main/1.%20Linear_Search_(Searching_Algorithm).py) file:
 + linear_search (function)
@@ -54,7 +60,7 @@ def linear_search(numbers_list, number_to_find):
 <br>
 
 ### [Iterative Binary Search (Searching Algorithm)](https://github.com/WindJammer6/15.-Common-Searching-And-Sorting-Algorithm-Implementations-Python/blob/main/2.%20Iterative_Binary_Search_(Searching_Algorithm).py) <a name = "iterativebinarysearch"></a>
-Here are the functions available in the ['1. Iterative_Binary_Search_(Searching_Algorithm).py'](https://github.com/WindJammer6/15.-Common-Searching-And-Sorting-Algorithm-Implementations-Python/blob/main/2.%20Iterative_Binary_Search_(Searching_Algorithm).py) file:
+Here are the functions available in the ['2. Iterative_Binary_Search_(Searching_Algorithm).py'](https://github.com/WindJammer6/15.-Common-Searching-And-Sorting-Algorithm-Implementations-Python/blob/main/2.%20Iterative_Binary_Search_(Searching_Algorithm).py) file:
 + iterative_binary_search (function)
 
 This implementation of Iterative Binary Search Algorithm is implemented iteratively.
@@ -87,43 +93,64 @@ def iterative_binary_search(numbers_list, number_to_find):
 <br>
 
 ### [Recursive Binary Search (Searching Algorithm)](https://github.com/WindJammer6/15.-Common-Searching-And-Sorting-Algorithm-Implementations-Python/blob/main/3.%20Recursive_Binary_Search_(Searching_Algorithm).py) <a name = "recursivebinarysearch"></a>
-I understand that there is already a Hash Table Data Structure implementation in Python as the built-in data type, Dictionaries. However I believe we can learn a lot more about Hash Tables and how Python's Dictionaries work from learning how to re-implement Hash Tables in Python.
+Here are the functions available in the ['3. Recursive_Binary_Search_(Searching_Algorithm).py'](https://github.com/WindJammer6/15.-Common-Searching-And-Sorting-Algorithm-Implementations-Python/blob/main/3.%20Recursive_Binary_Search_(Searching_Algorithm).py) file:
++ recursive_binary_search (function)
 
-This Hash Table Data Structure implementation in Python handles collisions via Seperate Chaining.
+This implementation of Recursive Binary Search Algorithm is implemented recursively.
+ 
+Recursive Binary Search Algorithm code:
+```python
+def recursive_binary_search(numbers_list, number_to_find, left_index, right_index):
 
-Here are the Instance Methods and functions available in the 'HashTable' class:
-+ Under the 'HashTable' class:
-  + __init__ (Special Method)
-  + get_hash (Instance Method)
-  + __setitem__ (Special Method)
-  + __getitem__ (Special Method)
-  + __delitem__ (Special Method)
+    if right_index < left_index:
+        return -1
+    
+    middle_index = (left_index + right_index) // 2
+    if middle_index >= len(numbers_list) or middle_index < 0:
+        return -1
+    middle_number = numbers_list[middle_index]
 
-Visualisation of the Hash Table Data Structure (from using Python's 'print()' function on the 'HashTable' object's '.arr' attribute):
-```
-[[], [('march 8', 380)], [('march 9', 302)], [], [], [], [], [], [], [('march 6', 110), ('march 17', 450)]]
+    if middle_number == number_to_find:
+        return middle_index
+    
+    if middle_number < number_to_find:
+        left_index = middle_index + 1
+    else:
+        right_index = middle_index - 1
+
+    return recursive_binary_search(numbers_list, number_to_find, left_index, right_index)
 ```
 
 <br>
 
 <br>
 
+## Sorting Algorithms <a name = "sortingalgorithms"></a>
 ### [Bubble Sort (Sorting Algorithm)](https://github.com/WindJammer6/15.-Common-Searching-And-Sorting-Algorithm-Implementations-Python/blob/main/4.%20Bubble_Sort_(Sorting_Algorithm).py) <a name = "bubblesort"></a>
-This Stack Data Structure implementation in Python is created using the 'deque' (or Double-Ended Queue) special Data Structure from Python's 'collections' library.
+Here are the functions available in the ['4. Bubble_Sort_(Sorting_Algorithm).py'](https://github.com/WindJammer6/15.-Common-Searching-And-Sorting-Algorithm-Implementations-Python/blob/main/4.%20Bubble_Sort_(Sorting_Algorithm).py) file:  
++ bubble_sort (function)
 
-Here are the Instance Methods and functions available in the 'Stack' class:
-+ Under the ‘Stack' class:
-   + _init_ (Special Method)
-   + push (Instance Method)
-   + pop (Instance Method)
-   + peek (Instance Method)
-   + is_empty (Instance Method)
-   + size (Instance Method)
-   + __repr__ (Special Method)
+This implementation of Bubble Sort Algorithm is implemented iteratively.
+ 
+Bubble Sort Algorithm code:
+```python
+def bubble_sort(number_list):
+    size = len(number_list)
 
-Visualisation of the Stack Data Structure (from Python’s ‘print()’ function on the ‘Stack’ object and ‘__repr__’):
-```
-deque([67, 7, 748])
+    for i in range(size - 1):
+
+        swapped = False
+        for j in range(size - 1 - i):
+
+            if number_list[j] > number_list[j+1]:
+                temp = number_list[j]
+
+                number_list[j] = number_list[j+1]
+                number_list[j+1] = temp
+                swapped = True
+
+        if not swapped:
+            break
 ```
 
 <br>
@@ -131,22 +158,73 @@ deque([67, 7, 748])
 <br>
 
 ### [Quick Sort (Sorting Algorithm)](https://github.com/WindJammer6/15.-Common-Searching-And-Sorting-Algorithm-Implementations-Python/blob/main/5.%20Quick_Sort_(Sorting_Algorithm).py) <a name = "quicksort"></a>
-This Queue Data Structure implementation in Python is created using the 'deque' (or Double-Ended Queue) special Data Structure from Python's 'collections' library.
+Here are the functions available in the ['5. Quick_Sort_(Sorting_Algorithm).py'](https://github.com/WindJammer6/15.-Common-Searching-And-Sorting-Algorithm-Implementations-Python/blob/main/5.%20Quick_Sort_(Sorting_Algorithm).py) file:
++ swapping_two_elements_in_a_list (function)
++ hoare_partition_scheme (function)
++ lomuto_parition_scheme (function)
++ quick_sort (function)
 
-Here are the Instance Methods and functions available in the 'Queue' class:
-+ Under the ‘Queue' class:
-   + _init_ (Special Method)
-   + enqueue (Instance Method)
-   + dequeue (Instance Method)
-   + front_element (Instance Method)
-   + last_element (Instance Method)
-   + is_empty (Instance Method)
-   + size (Instance Method)
-   + __repr__ (Special Method)
+This implementation of Quick Sort Algorithm is implemented recursively.
+ 
+Quick Sort Algorithm code:
+```python
+def swapping_two_elements_in_a_list(a, b, array):
+    if array[a] != array[b] and a != b:
+        temp = array[a]
+        array[a] = array[b]
+        array[b] = temp
 
-Visualisation of the Queue Data Structure (from Python’s ‘print()’ function on the ‘Queue’ object and ‘__repr__’):
-```
-deque([{'company': 'Walmart', 'timestamp': '15 apr, 11.03am', 'price': 135}, {'company': 'Walmart', 'timestamp': '15 apr, 11.02am', 'price': 131.12}])
+
+def hoare_partition_scheme(number_list, start_index_of_list, end_index_of_list):
+  
+    pivot_index = start_index_of_list
+    pivot = number_list[pivot_index]
+
+    start_pointer = pivot_index + 1
+    end_pointer = end_index_of_list
+
+    while start_pointer <= end_pointer:
+
+        while start_pointer < len(number_list) and number_list[start_pointer] <= pivot:
+            start_pointer += 1
+
+        while number_list[end_pointer] > pivot:
+            end_pointer -= 1
+
+        if start_pointer < end_pointer:
+            swapping_two_elements_in_a_list(start_pointer, end_pointer, number_list)  
+            
+    swapping_two_elements_in_a_list(pivot_index, end_pointer, number_list)
+
+    return end_pointer
+
+
+def lomuto_partition_scheme(number_list, start_index_of_list, end_index_of_list):
+  
+    pivot = number_list[end_index_of_list]
+    partition_index = start_index_of_list
+
+    for i in range(start_index_of_list, end_index_of_list):
+        if number_list[i] <= pivot:
+            swapping_two_elements_in_a_list(i, partition_index, number_list)
+            partition_index += 1
+
+    swapping_two_elements_in_a_list(partition_index, end_index_of_list, number_list)
+
+    return partition_index
+
+
+def quick_sort(number_list, start_index_of_list, end_index_of_list):
+
+    if start_index_of_list >= end_index_of_list:
+        return
+
+    else:
+        #Just change the 'hoare_partition_scheme' function here to 'lomuto_partition_scheme' function to carry out the Quick Sort Algorithm via Lomuto Partition scheme instead
+        #of via Hoare Partition scheme
+        partitioning_point = hoare_partition_scheme(number_list, start_index_of_list, end_index_of_list)
+        quick_sort(number_list, start_index_of_list, partitioning_point - 1)
+        quick_sort(number_list, partitioning_point + 1, end_index_of_list)
 ```
 
 <br>
@@ -154,28 +232,26 @@ deque([{'company': 'Walmart', 'timestamp': '15 apr, 11.03am', 'price': 135}, {'c
 <br>
 
 ### [Insertion Sort (Sorting Algorithm)](https://github.com/WindJammer6/15.-Common-Searching-And-Sorting-Algorithm-Implementations-Python/blob/main/6.%20Insertion_Sort_(Sorting_Algorithm).py) <a name = "insertionsort"></a>
-Here are the Instance Methods and functions available in the 'GeneralTreeNode' class:
-+ Under the ‘GeneralTreeNode' class:
-   + _init_ (Special Method)
-   + add_child_node (Instance Method)
-   + get_level_of_node (Instance Method)
-   + print_general_tree (Instance Method)
-   + build_electronics_tree (function)
+Here are the functions available in the ['6. Insertion_Sort_(Sorting_Algorithm).py'](https://github.com/WindJammer6/15.-Common-Searching-And-Sorting-Algorithm-Implementations-Python/blob/main/6.%20Insertion_Sort_(Sorting_Algorithm).py) file:
++ insertion_sort (function)
 
-Visualisation of the General Tree Data Structure (from ‘print_general_tree()’):
-```
-Electronics
-   |__Laptop
-      |__Macbook
-      |__Microsoft Surface
-      |__Thinkpad
-   |__Cell Phone
-      |__iPhone
-      |__Google Pixel
-      |__Vivo
-   |__Television
-      |__Samsung
-      |__LG
+This implementation of Insertion Sort Algorithm is implemented iteratively.
+ 
+Insertion Sort Algorithm code:
+```python
+def insertion_sort(number_list):
+
+    for i in range(1, len(number_list)):
+
+        anchor = number_list[i]
+
+        j = i - 1
+ 
+        while j >= 0 and anchor < number_list[j]:
+            number_list[j + 1] = number_list[j]
+            j = j - 1
+
+        number_list[j + 1] = anchor
 ```
 
 <br>
@@ -183,31 +259,38 @@ Electronics
 <br>
 
 ### [Shell Sort (Sorting Algorithm) (improved Insertion Sort Algorithm variation)](https://github.com/WindJammer6/15.-Common-Searching-And-Sorting-Algorithm-Implementations-Python/blob/main/7.%20Shell_Sort_(Sorting_Algorithm).py) <a name = "shellsort"></a>
-Here are the Instance Methods and functions available in the 'BinarySearchTreeNode' class:
-+ Under the ‘BinarySearchTreeNode' class:
-   + _init_ (Special Method)
-   + depth_first_search_in_order_traversal (Instance Method)
-   + depth_first_search_pre_order_traversal (Instance Method)
-   + depth_first_search_post_order_traversal (Instance Method)
-   + search_binary_search_tree (Instance Method)
-   + print_binary_search_tree (Instance Method)
-   + search_binary_search_tree (Instance Method)
-   + calculate_sum (Instance Method)
-   + find_min (Instance Method)
-   + find_max (Instance Method)
-   + delete_node (Instance Method)
-   + build_electronics_tree (function)
+Here are the functions available in the ['7. Shell_Sort_(Searching_Algorithm).py'](https://github.com/WindJammer6/15.-Common-Searching-And-Sorting-Algorithm-Implementations-Python/blob/main/7.%20Shell_Sort_(Sorting_Algorithm).py) file:
++ shell_sort (function)
 
-Visualisation of the Binary Search Tree Data Structure (from ‘print_binary_search_tree()’’):
-```
-        -> 88
-    -> 27
-            -> 23
-        -> 20
--> 15
-        -> 14
-    -> 12
-        -> 7
+This implementation of Shell Sort Algorithm is implemented iteratively.
+ 
+Shell SOrt Algorithm code:
+```python
+def shell_sort(number_list):
+
+    gap = len(number_list)//2
+
+    while gap > 0:
+
+      
+        #~~~(Start of 'gap-ed' Insertion Sort for a gap iteration in Shell Sort)~~~
+        
+        for i in range(gap, len(number_list)):
+
+            anchor = number_list[i]
+
+            j = i - gap
+
+            while j >= 0 and anchor < number_list[j]:
+                number_list[j + gap] = number_list[j]
+                j -= gap
+
+            number_list[j + gap] = anchor
+
+        #~~~(End of 'gap-ed' Insertion Sort for a gap iteration in Shell Sort)~~~
+
+
+        gap = gap // 2
 ```
 
 <br>
@@ -215,52 +298,72 @@ Visualisation of the Binary Search Tree Data Structure (from ‘print_binary_sea
 <br>
 
 ### [Merge Sort (Sorting Algorithm)](https://github.com/WindJammer6/15.-Common-Searching-And-Sorting-Algorithm-Implementations-Python/blob/main/8.%20Merge_Sort_(Sorting_Algorithm).py) <a name = "mergesort"></a>
-These Graph Data Structures are implemented using an Adjacency List. There is another common way to implement Graph Data Structures, as an Adjacency Matrix, but I find Adjacency List Graph Data Structures easier to understand. Please note that while Graph Data Structures should be able to take duplicates, but in these Graph Data Structure Python implementations I did not implement them to be able to. (I have a few ideas of how it can be done (I've shared them in my seperate repository ['12.-Data-Structures-and-Algorithms-Learning-and-Practice-Python'](https://github.com/WindJammer6/12.-Data-Structures-and-Algorithms-Learning-and-Practice-Python)), but it is too troublesome so I'll leave this as it is for now)
+Here are the functions available in the ['8. Merge_Sort_(Sorting_Algorithm).py'](https://github.com/WindJammer6/15.-Common-Searching-And-Sorting-Algorithm-Implementations-Python/blob/main/8.%20Merge_Sort_(Sorting_Algorithm).py) file:
++ merge_two_smaller_sorted_lists_to_a_merged_sorted_list (function)
++ merge_sort (function)
 
-I have made the 4 different types of Graph Data Structures:
-1. [Adjacency List Directed Graph](https://github.com/WindJammer6/13.-Common-Data-Structure-Implementations-Python/blob/main/8.%20Adjacency_List_Directed_Graph.py)
-2. [Adjacency List Undirected Graph](https://github.com/WindJammer6/13.-Common-Data-Structure-Implementations-Python/blob/main/9.%20Adjacency_List_Undirected_Graph.py)
-3. [Adjacency List Directed Weighted Graph](https://github.com/WindJammer6/13.-Common-Data-Structure-Implementations-Python/blob/main/910.%20Adjacency_List_Directed_Weighted_Graph)
-4. [Adjacency List Undirected Weighted Graph](https://github.com/WindJammer6/13.-Common-Data-Structure-Implementations-Python/blob/main/911.%20Adjacency_List_Undirected_Weighted_Graph_Data_Structure.py)
+This implementation of Merge Sort Algorithm is implemented recursively.
+ 
+Merge Sort Algorithm code:
+```python
+def merge_two_smaller_sorted_lists_to_a_merged_sorted_list(smaller_sorted_list_a, smaller_sorted_list_b, array):
 
-They are mostly quite similar, with good understanding of Graph Data Structures and with slight modifications to one of them, I was able to quickly convert it to the other types.
+    i = j = k = 0
 
-All 4 of them have the same Instance Methods and functions, with slight differences in code in some of the Instance Methods and functions due to the different properties of the different Graph Data Structures.
+    while i < len(smaller_sorted_list_a) and j < len(smaller_sorted_list_b):
+        if smaller_sorted_list_a[i] <= smaller_sorted_list_b[j]:
+            array[k] = smaller_sorted_list_a[i]
+            i += 1
 
-Here are the Instance Methods and functions available in the ‘AdjacencyListDirectedGraph'/‘AdjacencyListUndirectedGraph'/‘AdjacencyListDirectedWeightedGraph'/‘AdjacencyListUndirectedWeightedGraph' classes:
-+ Under the ‘AdjacencyListDirectedGraph'/‘AdjacencyListUndirectedGraph'/‘AdjacencyListDirectedWeightedGraph'/‘AdjacencyListUndirectedWeightedGraph' class:
-   + _init_ (Special Method)
-   + add_node (Instance Method)
-   + add_edge (Instance Method)
-   + delete_node (Instance Method)
-   + delete_edge (Instance Method)
-   + breadth_first_search (Instance Method)
-   + depth_first_search (Instance Method)
-   + get_all_possible_paths (Instance Method)
-   + get_shortest_path (Instance Method)
-   + __repr__ (Special Method)
+        else:
+            array[k] = smaller_sorted_list_b[j]
+            j += 1
+        k += 1
 
-Visualisation of the Adjacency List Graph Data Structure (from Python’s ‘print()’ function on the ‘AdjacencyListDirectedGraph’ object and ‘__repr__’):
-```
-{'Mumbai': ['Paris', 'Dubai'], 'Paris': ['Dubai', 'New York'], 'Dubai': ['New York'], 'New York': ['Toronto'], 'Toronto': []}
-```
+    while i < len(smaller_sorted_list_a):
+        array[k] = smaller_sorted_list_a[i]
+        i += 1
+        k += 1
 
-
-Visualisation of the Adjacency List Graph Data Structure (from Python’s ‘print()’ function on the ‘AdjacencyListUndirectedGraph’ object and ‘__repr__’):
-```
-{'Dhavel': ['Bhawin', 'David', 'Shukul', 'Rahul'], 'Bhawin': ['Dhavel', 'Nikisha'], 'David': ['Dhavel'], 'Shukul': ['Dhavel'], 'Rahul': ['Dhavel'], 'Nikisha': ['Bhawin']}
-```
+    while j < len(smaller_sorted_list_b):
+        array[k] = smaller_sorted_list_b[j]
+        j += 1
+        k += 1
 
 
-Visualisation of the Adjacency List Graph Data Structure (from Python’s ‘print()’ function on the ‘AdjacencyListDirectedWeightedGraph’ object and ‘__repr__’):
-```
-{'Mumbai': [('Paris', 2000), ('Dubai', 5000)], 'Paris': [('Dubai', 2000), ('New York', 8000)], 'Dubai': [('New York', 3000)], 'New York': [('Toronto', 400)], 'Toronto': []}
-```
+def merge_sort(array):
 
+    if len(array) <= 1:
+        return array
+    
+    middle_element_index = len(array)//2
+    
+    left_smaller_subarray = array[:middle_element_index]
+    right_smaller_subarray = array[middle_element_index:]
 
-Visualisation of the Adjacency List Graph Data Structure (from Python’s ‘print()’ function on the ‘AdjacencyListUndirectedWeightedGraph’ object and ‘__repr__’):
-```
-{'Dhavel': [('Bhawin', 6), ('David', 3), ('Shukul', 10), ('Rahul', 8)], 'Bhawin': [('Dhavel', 6), ('Nikisha', 7)], 'David': [('Dhavel', 3)], 'Shukul': [('Dhavel', 10)], 'Rahul': [('Dhavel', 8)], 'Nikisha': [('Bhawin', 7)]}
+    merge_sort(left_smaller_subarray)
+    merge_sort(right_smaller_subarray)
+
+    merge_two_smaller_sorted_lists_to_a_merged_sorted_list(left_smaller_subarray, right_smaller_subarray, array)
+
 ```
 
 ### [Selection Sort (Sorting Algorithm)](https://github.com/WindJammer6/15.-Common-Searching-And-Sorting-Algorithm-Implementations-Python/blob/main/9.%20Selection_Sort_(Sorting_Algorithm).py)<a name = "selectionsort"></a>
+Here are the functions available in the ['9. Selection_Sort_(Sorting_Algorithm).py'](https://github.com/WindJammer6/15.-Common-Searching-And-Sorting-Algorithm-Implementations-Python/blob/main/9.%20Selection_Sort_(Sorting_Algorithm).py) file:
++ selection_sort (function)
+
+This implementation of Selection Sort Algorithm is implemented iteratively.
+ 
+Selection Sort Algorithm code:
+```python
+def selection_sort(number_list):
+    for i in range(len(number_list) - 1):
+        minimum_element_index = i
+
+        for j in range(i + 1, len(number_list)):
+            if number_list[j] < number_list[minimum_element_index]:
+                minimum_element_index = j
+
+        if number_list[i] != number_list[minimum_element_index]:
+            number_list[i], number_list[minimum_element_index] = number_list[minimum_element_index], number_list[i]
+```
