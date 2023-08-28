@@ -11,7 +11,7 @@ Searched the internet, however I haven't found a good compilation of the various
 <br>
 
 ## Table of Contents
-Here are the common Data Structure Python implementations in this compilation:
+Here are the common Searching and Sorting Algorithm Python implementations in this compilation:
 + [Code Description](#codedescription)
    + [Linear Search (Searching Algorithm)](#linearsearch)
    + Binary Search (Searching Algorithm)
@@ -40,8 +40,13 @@ Here are the functions available in the ['1. Linear_Search_(Searching_Algorithm)
 This implementation of Linear Search Algorithm is implemented iteratively.
  
 Linear Search Algorithm code:
-```
-56-->86-->89-->39-->99-->7-->90-->
+```python
+def linear_search(numbers_list, number_to_find):
+    for index, element in enumerate(numbers_list):
+        if element == number_to_find:
+            return index
+        
+    return -1
 ```
 
 <br>
@@ -49,24 +54,32 @@ Linear Search Algorithm code:
 <br>
 
 ### [Iterative Binary Search (Searching Algorithm)](https://github.com/WindJammer6/15.-Common-Searching-And-Sorting-Algorithm-Implementations-Python/blob/main/2.%20Iterative_Binary_Search_(Searching_Algorithm).py) <a name = "iterativebinarysearch"></a>
-Here are the Instance Methods and functions available in the 'Node' and 'DoublyLinkedList' classes:
-+ Under the 'Node' class:
-   + __init__ (Special Method)
-+ Under the 'DoublyLinkedList' class:
-   + __init__ (Special Method)
-   + insert_node_at_beginning (Instance Method)
-   + insert_at_end (Instance Method)
-   + get_length_of_doubly_linked_list (Instance Method)
-   + print_doubly_linked_list (Instance Method)
-   + remove_at_index (Instance Method)
-   + insert_at_index (Instance Method)
-   + insert_multiple_values_at_index (Instance Method)
-   + print_forward (Instance Method)
-   + print_backwards (Instance Method)
+Here are the functions available in the ['1. Iterative_Binary_Search_(Searching_Algorithm).py'](https://github.com/WindJammer6/15.-Common-Searching-And-Sorting-Algorithm-Implementations-Python/blob/main/2.%20Iterative_Binary_Search_(Searching_Algorithm).py) file:
++ iterative_binary_search (function)
+
+This implementation of Iterative Binary Search Algorithm is implemented iteratively.
  
-Visualisation of the Doubly Linked List Data Structure (from 'print_doubly_linked_list()'):
-```
-banana <--> mango <--> grapes <--> orange
+Iterative Binary Search Algorithm code:
+```python
+def iterative_binary_search(numbers_list, number_to_find):
+
+    left_index = 0
+    right_index = len(numbers_list) - 1
+    middle_index = 0
+
+    while left_index <= right_index:
+        middle_index = (left_index + right_index) // 2
+        middle_number = numbers_list[middle_index]
+
+        if middle_number == number_to_find:
+            return middle_index
+        
+        if middle_number < number_to_find:
+            left_index = middle_index + 1
+        else:
+            right_index = middle_index - 1
+
+    return -1
 ```
 
 <br>
