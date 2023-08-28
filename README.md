@@ -28,9 +28,12 @@ Here are the common Searching and Sorting Algorithm Python implementations in th
         -> [Shell Sort (Sorting Algorithm) (improved Insertion Sort Algorithm variation)](#shellsort)
       + [Merge Sort (Sorting Algorithm)](#mergesort)
       + [Selection Sort (Sorting Algorithm)](#selectionsort)
+
++ [Comparing the Time Complexity of the various Searching and Sorting Algorithms with the pythonic way of searching and sorting an element in a List](#comparing)
         
 Notes: 
-- This compilation is not exhaustive and there are obviously other more advanced types of searching and sorting Algorithms that I feel are less beginner-friendly that I did not add to this compilation (e.g. Ternary Search Algorithm and Heap Sort Algorithm (improved Selection Sort Algorithm variation))
+- This compilation is not exhaustive and there are obviously other more advanced types of searching and sorting Algorithms that I feel are less beginner-friendly that I did not add to this compilation (e.g. Ternary Search Algorithm and Heap Sort Algorithm (improved Selection Sort Algorithm variation))  
+- In these Searching and Sorting Algorithm implementations in Python, we will only be implementing them in such a way that they only work on Array Data Structures. It is definitely possible to use these Searching and Sorting Algorithms on other Data Structures depending on the requirements and characteristics of the data. (E.g. Binary Search Algorithm can also be used on sorted Linked List Data Structures and Binary Search Tree Data Structures (with some modifications) and Quick Sort can Algorithm can be used on Linked List Data Structures (with some modifications))
 
 <br>
 
@@ -389,3 +392,10 @@ def selection_sort(number_list):
         if number_list[i] != number_list[minimum_element_index]:
             number_list[i], number_list[minimum_element_index] = number_list[minimum_element_index], number_list[i]
 ```
+
+<br>
+
+<br>
+
+## Comparing the Time Complexity of the various Searching and Sorting Algorithms with the pythonic way of searching and sorting an element in a List
+I created 2 additional
