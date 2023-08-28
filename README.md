@@ -12,8 +12,9 @@ Searched the internet, however I haven't found a good compilation of the various
 
 ## Table of Contents
 Here are the common Searching and Sorting Algorithm Python implementations in this compilation:
++ [Big O Notation of Time and Space Complexity for the Searching and Sorting Algorithms](#bigonotation)
+
 + [Code Description](#codedescription)
-+ [Big O Notation of Time Complexity and Space Complexity for the Searching and Sorting Algorithms](#bigonotation)
    + [Searching Algorithms:](#searchingalgorithms)
       + [Linear Search (Searching Algorithm)](#linearsearch)
       + Binary Search (Searching Algorithm)
@@ -30,6 +31,29 @@ Here are the common Searching and Sorting Algorithm Python implementations in th
         
 Notes: 
 - This compilation is not exhaustive and there are obviously other more advanced types of searching and sorting Algorithms that I feel are less beginner-friendly that I did not add to this compilation (e.g. Ternary Search Algorithm and Heap Sort Algorithm (improved Selection Sort Algorithm variation))
+
+<br>
+
+<br>
+
+## Big O Notation of Time and Space Complexity for the Searching and Sorting Algorithms<a name = "bigonotation"></a>
+***For Search Algorithms:***
+| **Search Algorithm** | **Space Complexity**  | **Time Complexity** |
+|:------:|:------:|:------:|
+|      Linear Search	      |       O(1)	     |       O(n)     |
+| Iterative Binary Search  |       O(1)		  |     O(log n)   |
+| Recursive Binary Search  |     O(log n) 	  |     O(log n)   |
+
+***For Sorting Algorithms:***
+| **Sorting Algorithm** | **Space Complexity**  | **Time Complexity** |
+|:------:|:------:|:------:|
+|       Bubble Sort	     |       O(1)		   |       O(n^2)       |
+|       Quick Sort	     |      O(log n)    | 	   O(n log n)     |
+|      Insertion Sort     |       O(1)		   |       O(n^2)       |
+|       Shell Sort        |       O(1)       |       O(n^2)       |
+|       Merge Sort	     |       O(n)	      |     O(n log n)     |
+|      Selection Sort     |	    O(1)	      |       O(n^2)       |
+|       Heap Sort	        |       O(1)	      |     O(n log n)     |
 
 <br>
 
