@@ -35,9 +35,6 @@ Notes:
 <br>
 
 ## Code Description <a name = "codedescription"></a>
-
-<br>
-
 ## Searching Algorithms <a name = "searchingalgorithms"></a>
 ### [Linear Search (Searching Algorithm)](https://github.com/WindJammer6/15.-Common-Searching-And-Sorting-Algorithm-Implementations-Python/blob/main/1.%20Linear_Search_(Searching_Algorithm).py) <a name = "linearsearch"></a>
 Here are the functions available in the ['1. Linear_Search_(Searching_Algorithm).py'](https://github.com/WindJammer6/15.-Common-Searching-And-Sorting-Algorithm-Implementations-Python/blob/main/1.%20Linear_Search_(Searching_Algorithm).py) file:
