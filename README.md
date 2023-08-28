@@ -29,7 +29,7 @@ Here are the common Searching and Sorting Algorithm Python implementations in th
       + [Merge Sort (Sorting Algorithm)](#mergesort)
       + [Selection Sort (Sorting Algorithm)](#selectionsort)
 
-+ [Comparing the Time Complexity of the various Searching and Sorting Algorithms with the pythonic way of searching and sorting an element in a List](#comparing)
++ [Comparing the time complexity of the various Searching and Sorting Algorithms with the pythonic way of searching and sorting elements in a list](#comparing)
         
 Notes: 
 - This compilation is not exhaustive and there are obviously other more advanced types of searching and sorting Algorithms that I feel are less beginner-friendly that I did not add to this compilation (e.g. Ternary Search Algorithm and Heap Sort Algorithm (improved Selection Sort Algorithm variation))  
@@ -397,5 +397,65 @@ def selection_sort(number_list):
 
 <br>
 
-## Comparing the Time Complexity of the various Searching and Sorting Algorithms with the pythonic way of searching and sorting an element in a List
-I created 2 additional
+## Comparing the time complexity of the various Searching and Sorting Algorithms with the pythonic way of searching and sorting elements in a list<a name = "comparing"></a>
+I created 2 additional files, ['comparing_the_time_complexity_of_the_searching_algorithms_and_searching_pythonically.py'](https://github.com/WindJammer6/15.-Common-Searching-And-Sorting-Algorithm-Implementations-Python/blob/main/comparing_the_time_complexity_of_the_searching_algorithms_and_searching_pythonically.py) and ['comparing_the_time_complexity_of_the_sorting_algorithms_and_sorting_pythonically.py'](https://github.com/WindJammer6/15.-Common-Searching-And-Sorting-Algorithm-Implementations-Python/blob/main/comparing_the_time_complexity_of_the_sorting_algorithms_and_sorting_pythonically.py) files that compares the time complexity of the various Searching and Sorting Algorithms with the pythonic way of searching and sorting an element in a list, via the 'time_it' decorator in the ['time_it'](https://github.com/WindJammer6/15.-Common-Searching-And-Sorting-Algorithm-Implementations-Python/blob/main/time_it.py) file, which measures the runtime of a function.
+
+***Comparing the time complexity of the various Searching Algorithms with the pythonic way of searching an element in a list:***
+Here is the pythonic way of searching an element I created as the 'python_search_function' function:
+```python
+def python_search_function(number_list, number_to_find):
+    if number_to_find in number_list:
+        return number_list.index(number_to_find)
+    else:
+        return -1
+```
+
+Here is the output when I run the ['comparing_the_time_complexity_of_the_searching_algorithms_and_searching_pythonically.py'](https://github.com/WindJammer6/15.-Common-Searching-And-Sorting-Algorithm-Implementations-Python/blob/main/comparing_the_time_complexity_of_the_searching_algorithms_and_searching_pythonically.py) file:
+```
+Testing the searching algorithms on a large unsorted List:
+linear_search took 0.0 milliseconds
+python_search_function took 0.0 milliseconds
+
+
+Testing the searching algorithms on a large sorted List:
+linear_search took 36.65637969970703 milliseconds
+iterative_binary_search took 0.0 milliseconds
+recursive_binary_search took 0.0 milliseconds
+python_search_function took 16.092300415039062 milliseconds
+```
+
+<br>
+
+***Comparing the time complexity of the various Sorting Algorithms with the pythonic way of sorting elements in a list:***
+Here is the pythonic way of sorting elements I created as the 'python_sort_function' function:
+```python
+def python_sort_function(number_list):
+    number_list.sort()
+```
+
+Here is the output when I run the ['comparing_the_time_complexity_of_the_sorting_algorithms_and_sorting_pythonically.py'](https://github.com/WindJammer6/15.-Common-Searching-And-Sorting-Algorithm-Implementations-Python/blob/main/comparing_the_time_complexity_of_the_sorting_algorithms_and_sorting_pythonically.py) file:
+```
+Testing the sorting algorithms on a large sorted List:
+bubble_sort took 18.344402313232422 milliseconds
+quick_sort took 1.0194778442382812 milliseconds
+insertion_sort took 9.144783020019531 milliseconds
+shell_sort took 1.0161399841308594 milliseconds
+merge_sort took 1.0406970977783203 milliseconds
+selection_sort took 9.809255599975586 milliseconds
+python_sort_function took 0.9996891021728516 milliseconds
+
+
+Testing the sorting algorithms on a large unsorted List:
+bubble_sort took 1.5571117401123047 milliseconds
+quick_sort took 1879.601240158081 milliseconds
+insertion_sort took 1.0437965393066406 milliseconds
+shell_sort took 18.454313278198242 milliseconds
+merge_sort took 24.295806884765625 milliseconds
+selection_sort took 1949.8867988586426 milliseconds
+python_sort_function took 0.0 milliseconds
+```
+
+<br>
+
+***Analysis:***
+From the output from these 2 files, you can clearly see proof of the individual Big O Notation of Time Complexity for each of the Searching and Sorting Algorithms, as well as have some insights as to how the in-built ways of searching and sorting in Python are implemented behind the scenes.
