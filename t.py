@@ -20,8 +20,8 @@ from time_it import time_it
 #By default, this value is usually 10^3. If you are dealing with large inputs, you can set it to, 10^6 
 #so that large inputs can be handled without any errors.
 
-#Link: https://stackoverflow.com/questions/72309971/quicksort-recursionerror (stackoverflow)
-#      https://www.geeksforgeeks.org/python-handling-recursion-limit/ (GeeksforGeeks)
+#Source(s): https://stackoverflow.com/questions/72309971/quicksort-recursionerror (stackoverflow)
+#           https://www.geeksforgeeks.org/python-handling-recursion-limit/ (GeeksforGeeks)
 
 #Hence the reason for this line of code
 sys.setrecursionlimit(10**6)
