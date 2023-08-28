@@ -34,21 +34,12 @@ Notes:
 ## Code Description <a name = "codedescription"></a>
 
 ### [Linear Search (Searching Algorithm)](https://github.com/WindJammer6/15.-Common-Searching-And-Sorting-Algorithm-Implementations-Python/blob/main/1.%20Linear_Search_(Searching_Algorithm).py) <a name = "linearsearch"></a>
-Here are the Instance Methods and functions available in the 'Node' and 'LinkedList' classes:
-+ Under the 'Node' class:
-   + __init__ (Special Method)
-+ Under the 'LinkedList' class:
-   + __init__ (Special Method)
-   + insert_node_at_beginning (Instance Method)
-   + insert_at_end (Instance Method)
-   + get_length_of_linked_list (Instance Method)
-   + print_linked_list (Instance Method)
-   + remove_at_index (Instance Method)
-   + insert_at_index (Instance Method)
-   + insert_multiple_values_at_index (Instance Method)
-   + merge_linked_list_at_end (function)
+Here are the functions available in the ['1. Linear_Search_(Searching_Algorithm).py'](https://github.com/WindJammer6/15.-Common-Searching-And-Sorting-Algorithm-Implementations-Python/blob/main/1.%20Linear_Search_(Searching_Algorithm).py) file:
++ linear_search (function)
+
+This implementation of Linear Search Algorithm is implemented iteratively.
  
-Visualisation of the Singly Linked List Data Structure (from 'print_linked_list()'):
+Linear Search Algorithm code:
 ```
 56-->86-->89-->39-->99-->7-->90-->
 ```
@@ -178,7 +169,7 @@ Electronics
 
 <br>
 
-### [Shell Sort (Sorting Algorithm) (](https://github.com/WindJammer6/15.-Common-Searching-And-Sorting-Algorithm-Implementations-Python/blob/main/7.%20Shell_Sort_(Sorting_Algorithm).py) <a name = "shellsort"></a>
+### [Shell Sort (Sorting Algorithm) (improved Insertion Sort Algorithm variation)](https://github.com/WindJammer6/15.-Common-Searching-And-Sorting-Algorithm-Implementations-Python/blob/main/7.%20Shell_Sort_(Sorting_Algorithm).py) <a name = "shellsort"></a>
 Here are the Instance Methods and functions available in the 'BinarySearchTreeNode' class:
 + Under the ‘BinarySearchTreeNode' class:
    + _init_ (Special Method)
@@ -210,7 +201,7 @@ Visualisation of the Binary Search Tree Data Structure (from ‘print_binary_sea
 
 <br>
 
-### [Merge Sort (Sorting Algorithm)] <a name = "mergesort"></a>
+### [Merge Sort (Sorting Algorithm)](https://github.com/WindJammer6/15.-Common-Searching-And-Sorting-Algorithm-Implementations-Python/blob/main/8.%20Merge_Sort_(Sorting_Algorithm).py) <a name = "mergesort"></a>
 These Graph Data Structures are implemented using an Adjacency List. There is another common way to implement Graph Data Structures, as an Adjacency Matrix, but I find Adjacency List Graph Data Structures easier to understand. Please note that while Graph Data Structures should be able to take duplicates, but in these Graph Data Structure Python implementations I did not implement them to be able to. (I have a few ideas of how it can be done (I've shared them in my seperate repository ['12.-Data-Structures-and-Algorithms-Learning-and-Practice-Python'](https://github.com/WindJammer6/12.-Data-Structures-and-Algorithms-Learning-and-Practice-Python)), but it is too troublesome so I'll leave this as it is for now)
 
 I have made the 4 different types of Graph Data Structures:
@@ -259,4 +250,4 @@ Visualisation of the Adjacency List Graph Data Structure (from Python’s ‘pri
 {'Dhavel': [('Bhawin', 6), ('David', 3), ('Shukul', 10), ('Rahul', 8)], 'Bhawin': [('Dhavel', 6), ('Nikisha', 7)], 'David': [('Dhavel', 3)], 'Shukul': [('Dhavel', 10)], 'Rahul': [('Dhavel', 8)], 'Nikisha': [('Bhawin', 7)]}
 ```
 
-### [Selection Sort (Sorting Algorithm)](#selectionsort)
+### [Selection Sort (Sorting Algorithm)](https://github.com/WindJammer6/15.-Common-Searching-And-Sorting-Algorithm-Implementations-Python/blob/main/9.%20Selection_Sort_(Sorting_Algorithm).py)<a name = "selectionsort"></a>
