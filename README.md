@@ -289,7 +289,7 @@ Here are the functions available in the ['7. Shell_Sort_(Searching_Algorithm).py
 
 This implementation of Shell Sort Algorithm is implemented iteratively.
  
-Shell SOrt Algorithm code:
+Shell Sort Algorithm code:
 ```python
 def shell_sort(number_list):
 
@@ -400,7 +400,9 @@ def selection_sort(number_list):
 ## Comparing the time complexity of the various Searching and Sorting Algorithms with the pythonic way of searching and sorting elements in a list<a name = "comparing"></a>
 I created 2 additional files, ['comparing_the_time_complexity_of_the_searching_algorithms_and_searching_pythonically.py'](https://github.com/WindJammer6/15.-Common-Searching-And-Sorting-Algorithm-Implementations-Python/blob/main/comparing_the_time_complexity_of_the_searching_algorithms_and_searching_pythonically.py) and ['comparing_the_time_complexity_of_the_sorting_algorithms_and_sorting_pythonically.py'](https://github.com/WindJammer6/15.-Common-Searching-And-Sorting-Algorithm-Implementations-Python/blob/main/comparing_the_time_complexity_of_the_sorting_algorithms_and_sorting_pythonically.py) files that compares the time complexity of the various Searching and Sorting Algorithms with the pythonic way of searching and sorting an element in a list, via the 'time_it' decorator in the ['time_it'](https://github.com/WindJammer6/15.-Common-Searching-And-Sorting-Algorithm-Implementations-Python/blob/main/time_it.py) file, which measures the runtime of a function.
 
-***Comparing the time complexity of the various Searching Algorithms with the pythonic way of searching an element in a list:***
+<br>
+
+***Comparing the time complexity of the various Searching Algorithms with the pythonic way of searching an element in a list:***  
 Here is the pythonic way of searching an element I created as the 'python_search_function' function:
 ```python
 def python_search_function(number_list, number_to_find):
@@ -409,6 +411,7 @@ def python_search_function(number_list, number_to_find):
     else:
         return -1
 ```
+
 
 Here is the output when I run the ['comparing_the_time_complexity_of_the_searching_algorithms_and_searching_pythonically.py'](https://github.com/WindJammer6/15.-Common-Searching-And-Sorting-Algorithm-Implementations-Python/blob/main/comparing_the_time_complexity_of_the_searching_algorithms_and_searching_pythonically.py) file:
 ```
@@ -426,12 +429,13 @@ python_search_function took 16.092300415039062 milliseconds
 
 <br>
 
-***Comparing the time complexity of the various Sorting Algorithms with the pythonic way of sorting elements in a list:***
+***Comparing the time complexity of the various Sorting Algorithms with the pythonic way of sorting elements in a list:***  
 Here is the pythonic way of sorting elements I created as the 'python_sort_function' function:
 ```python
 def python_sort_function(number_list):
     number_list.sort()
 ```
+
 
 Here is the output when I run the ['comparing_the_time_complexity_of_the_sorting_algorithms_and_sorting_pythonically.py'](https://github.com/WindJammer6/15.-Common-Searching-And-Sorting-Algorithm-Implementations-Python/blob/main/comparing_the_time_complexity_of_the_sorting_algorithms_and_sorting_pythonically.py) file:
 ```
