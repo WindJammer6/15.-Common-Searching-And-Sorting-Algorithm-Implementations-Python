@@ -4,7 +4,7 @@ A compilation of various common Searching and Sorting Algorithm implementations 
 ## Thoughts on starting this compilation
 Searched the internet, however I haven't found a good compilation of the various common Data Structure implementations in Python. So I decided to make one for myself, or for anyone else who wish to use this compilation. Of course, every version of a Data Structure implementation is slightly different in terms of how they are implemented so if you wish to use the Data Structure Python implementations in this compilation for your personal projects you might need to have a understanding on how these implementations are created, so I strongly suggest you take a look at [codebasics' Youtube playlist on Data Structure and Algorithms](https://www.youtube.com/playlist?list=PLeo1K3hjS3uu_n_a__MI_KktGTLYopZ12) and [Amulya's Academy's Youtube channel](https://www.youtube.com/@AmulsAcademy) (for the Graph Data Structures Python implementation) that I got the Data Structure Python implementations from, or from looking at the seperate repository in my Github profile ['12.-Data-Structures-and-Algorithms-Learning-and-Practice-Python'](https://github.com/WindJammer6/12.-Data-Structures-and-Algorithms-Learning-and-Practice-Python)
 
-<ins>Disclaimer</ins>: Most of these Data Structures Python implementations are done by Dhaval Patel, founder of the Youtube channel [codebasics](https://www.youtube.com/@codebasics), while a big part of the Graph Data Structures are done by Amulya, where I got the code from her Youtube channel [Amulya's Academy](https://www.youtube.com/@AmulsAcademy). I did not create these Data Structure Python implementations, I merely compiled them while making some minor changes as well as added some simple Instance Methods on the Data Structure Classes. 
+<ins>Disclaimer</ins>: Most of these Searching and Sorting Algorithm Python implementations are done by Dhaval Patel, founder of the Youtube channel [codebasics](https://www.youtube.com/@codebasics). I did not create these Searching and Sorting Algorithm Python implementations, I merely compiled them while making some minor changes to them. 
 
 <br>
 
@@ -13,28 +13,19 @@ Searched the internet, however I haven't found a good compilation of the various
 ## Table of Contents
 Here are the common Data Structure Python implementations in this compilation:
 + [Code Description](#codedescription)
-   + Linked List Data Structures:
-      + [Singly Linked List Data Structure](#singlylinkedlist)
-      + [Doubly Linked List Data Structure](#doublylinkedlist)
-   + [Hash Table Data Structure](#hashtable)
-   + [Stack Data Structure](#stack)
-   + [Queue Data Structure](#queue)
-   + Tree Data Structures:
-      + [General Tree Data Structure](#generaltree)
-      + [Binary Search Tree Data Structure](#binarysearchtree)
-   + Graph Data Structures:
-      + Adjacency List Graph Data Structures:
-        + [Adjacency List Directed Graph Data Structure](#graph)
-        + [Adjacency List Undirected Graph Data Structure](#graph)
-        + [Adjacency List Directed Weighted Graph Data Structure](#graph)
-        + [Adjacency List Undirected Weighted Graph Data Structure](#graph)
+   + [Linear Search (Searching Algorithm)](#linearsearch)
+   + Binary Search (Searching Algorithm)
+      + [Iterative Binary Search (Searching Algorithm)](#iterativebinarysearch)
+      + [Recursive Binary Search (Searching Algorithm)](#recursivebinarysearch)
+   + [Bubble Sort (Sorting Algorithm)](#bubblesort)
+   + [Quick Sort (Sorting Algorithm)](#quicksort)
+   + [Insertion Sort (Sorting Algorithm)](#insertionsort)  
+     -> [Shell Sort (Sorting Algorithm) (improved Insertion Sort Algorithm variation)](#shellsort)
+   + [Merge Sort (Sorting Algorithm)](#mergesort)
+   + [Selection Sort (Sorting Algorithm)](#selectionsort)
         
 Notes: 
-- Arrays are also a very common Data Structure, however, it is a bit redundant to try to re-implement them again in Python as there are already 3 different Array Data Structure implementations in Python as built-in data types, Lists, Sets and Tuples. Hence, I will be omitting Array Data Structures implementations in Python in this compilation.
-
-- Adjacency Matrix Graph Data Structure is also a common method of representing Graphs. However, I feel that the Adjacency List Graph Data Structure is more common (from what I've seen online), and that it is easier to understand (at least to me). Hence I will only be including the various types of Adjacency List Graph Data Structures in this compilation.
-
-- This compilation is not exhaustive and there are many other types of sub-Data Structures that I feel are less common that I did not add to this compilation (e.g. sub-Data Structures of Linked List Data Structure - Singly Cirular Linked Lists and Doubly Circular Linked Lists, and sub-Data Structures of Tree Data Structure - AVL Trees and Red-Black Trees)
+- This compilation is not exhaustive and there are obviously other more advanced types of searching and sorting Algorithms that I feel are less beginner-friendly that I did not add to this compilation (e.g. Ternary Search Algorithm and Heap Sort Algorithm (improved Selection Sort Algorithm variation))
 
 <br>
 
@@ -42,7 +33,7 @@ Notes:
 
 ## Code Description <a name = "codedescription"></a>
 
-### [Singly Linked List Data Structure](https://github.com/WindJammer6/13.-Common-Data-Structure-Implementations-Python/blob/main/1.%20Singly_Linked_List.py) <a name = "singlylinkedlist"></a>
+### [Linear Search (Searching Algorithm)](https://github.com/WindJammer6/15.-Common-Searching-And-Sorting-Algorithm-Implementations-Python/blob/main/1.%20Linear_Search_(Searching_Algorithm).py) <a name = "linearsearch"></a>
 Here are the Instance Methods and functions available in the 'Node' and 'LinkedList' classes:
 + Under the 'Node' class:
    + __init__ (Special Method)
@@ -66,7 +57,7 @@ Visualisation of the Singly Linked List Data Structure (from 'print_linked_list(
 
 <br>
 
-### [Doubly Linked List Data Structure](https://github.com/WindJammer6/13.-Common-Data-Structure-Implementations-Python/blob/main/2.%20Doubly_Linked_List.py) <a name = "doublylinkedlist"></a>
+### [Iterative Binary Search (Searching Algorithm)](https://github.com/WindJammer6/15.-Common-Searching-And-Sorting-Algorithm-Implementations-Python/blob/main/2.%20Iterative_Binary_Search_(Searching_Algorithm).py) <a name = "iterativebinarysearch"></a>
 Here are the Instance Methods and functions available in the 'Node' and 'DoublyLinkedList' classes:
 + Under the 'Node' class:
    + __init__ (Special Method)
@@ -91,7 +82,7 @@ banana <--> mango <--> grapes <--> orange
 
 <br>
 
-### [Hash Table Data Structure](https://github.com/WindJammer6/13.-Common-Data-Structure-Implementations-Python/blob/main/3.%20Hash_Table.py) <a name = "hashtable"></a>
+### [Recursive Binary Search (Searching Algorithm)](https://github.com/WindJammer6/15.-Common-Searching-And-Sorting-Algorithm-Implementations-Python/blob/main/3.%20Recursive_Binary_Search_(Searching_Algorithm).py) <a name = "recursivebinarysearch"></a>
 I understand that there is already a Hash Table Data Structure implementation in Python as the built-in data type, Dictionaries. However I believe we can learn a lot more about Hash Tables and how Python's Dictionaries work from learning how to re-implement Hash Tables in Python.
 
 This Hash Table Data Structure implementation in Python handles collisions via Seperate Chaining.
@@ -113,7 +104,7 @@ Visualisation of the Hash Table Data Structure (from using Python's 'print()' fu
 
 <br>
 
-### [Stack Data Structure](https://github.com/WindJammer6/13.-Common-Data-Structure-Implementations-Python/blob/main/4.%20Stack.py) <a name = "stack"></a>
+### [Bubble Sort (Sorting Algorithm)](https://github.com/WindJammer6/15.-Common-Searching-And-Sorting-Algorithm-Implementations-Python/blob/main/4.%20Bubble_Sort_(Sorting_Algorithm).py) <a name = "bubblesort"></a>
 This Stack Data Structure implementation in Python is created using the 'deque' (or Double-Ended Queue) special Data Structure from Python's 'collections' library.
 
 Here are the Instance Methods and functions available in the 'Stack' class:
@@ -135,7 +126,7 @@ deque([67, 7, 748])
 
 <br>
 
-### [Queue Data Structure](https://github.com/WindJammer6/13.-Common-Data-Structure-Implementations-Python/blob/main/5.%20Queue.py) <a name = "queue"></a>
+### [Quick Sort (Sorting Algorithm)](https://github.com/WindJammer6/15.-Common-Searching-And-Sorting-Algorithm-Implementations-Python/blob/main/5.%20Quick_Sort_(Sorting_Algorithm).py) <a name = "quicksort"></a>
 This Queue Data Structure implementation in Python is created using the 'deque' (or Double-Ended Queue) special Data Structure from Python's 'collections' library.
 
 Here are the Instance Methods and functions available in the 'Queue' class:
@@ -158,7 +149,7 @@ deque([{'company': 'Walmart', 'timestamp': '15 apr, 11.03am', 'price': 135}, {'c
 
 <br>
 
-### [General Tree Data Structure](https://github.com/WindJammer6/13.-Common-Data-Structure-Implementations-Python/blob/main/6.%20General_Tree.py) <a name = "generaltree"></a>
+### [Insertion Sort (Sorting Algorithm)](https://github.com/WindJammer6/15.-Common-Searching-And-Sorting-Algorithm-Implementations-Python/blob/main/6.%20Insertion_Sort_(Sorting_Algorithm).py) <a name = "insertionsort"></a>
 Here are the Instance Methods and functions available in the 'GeneralTreeNode' class:
 + Under the ‘GeneralTreeNode' class:
    + _init_ (Special Method)
@@ -187,7 +178,7 @@ Electronics
 
 <br>
 
-### [Binary Search Tree Data Structure](https://github.com/WindJammer6/13.-Common-Data-Structure-Implementations-Python/blob/main/7.%20Binary_Search_Tree.py) <a name = "binarysearchtree"></a>
+### [Shell Sort (Sorting Algorithm) (](https://github.com/WindJammer6/15.-Common-Searching-And-Sorting-Algorithm-Implementations-Python/blob/main/7.%20Shell_Sort_(Sorting_Algorithm).py) <a name = "shellsort"></a>
 Here are the Instance Methods and functions available in the 'BinarySearchTreeNode' class:
 + Under the ‘BinarySearchTreeNode' class:
    + _init_ (Special Method)
@@ -219,7 +210,7 @@ Visualisation of the Binary Search Tree Data Structure (from ‘print_binary_sea
 
 <br>
 
-### Graph Data Structures <a name = "graph"></a>
+### [Merge Sort (Sorting Algorithm)] <a name = "mergesort"></a>
 These Graph Data Structures are implemented using an Adjacency List. There is another common way to implement Graph Data Structures, as an Adjacency Matrix, but I find Adjacency List Graph Data Structures easier to understand. Please note that while Graph Data Structures should be able to take duplicates, but in these Graph Data Structure Python implementations I did not implement them to be able to. (I have a few ideas of how it can be done (I've shared them in my seperate repository ['12.-Data-Structures-and-Algorithms-Learning-and-Practice-Python'](https://github.com/WindJammer6/12.-Data-Structures-and-Algorithms-Learning-and-Practice-Python)), but it is too troublesome so I'll leave this as it is for now)
 
 I have made the 4 different types of Graph Data Structures:
@@ -267,3 +258,5 @@ Visualisation of the Adjacency List Graph Data Structure (from Python’s ‘pri
 ```
 {'Dhavel': [('Bhawin', 6), ('David', 3), ('Shukul', 10), ('Rahul', 8)], 'Bhawin': [('Dhavel', 6), ('Nikisha', 7)], 'David': [('Dhavel', 3)], 'Shukul': [('Dhavel', 10)], 'Rahul': [('Dhavel', 8)], 'Nikisha': [('Bhawin', 7)]}
 ```
+
+### [Selection Sort (Sorting Algorithm)](#selectionsort)
