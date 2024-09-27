@@ -59,5 +59,5 @@ def quick_sort(number_list, start_index_of_list, end_index_of_list):
 
 if __name__ == '__main__':
     nums_list = [11, 9, 29, 7, 2, 15, 28]
-    quick_sort(nums_list)
+    quick_sort(nums_list, 0, len(nums_list)-1)
     print(nums_list)
