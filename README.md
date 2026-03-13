@@ -537,22 +537,26 @@ def python_sort_function(number_list):
 Here is the output when I run the ['comparing_the_time_complexity_of_the_sorting_algorithms_and_sorting_pythonically.py'](https://github.com/WindJammer6/15.-Common-Searching-And-Sorting-Algorithm-Implementations-Python/blob/main/comparing_the_time_complexity_of_the_sorting_algorithms_and_sorting_pythonically.py) file:
 ```
 Testing the sorting algorithms on a large sorted List:
-bubble_sort took 18.344402313232422 milliseconds
-quick_sort took 1.0194778442382812 milliseconds
-insertion_sort took 9.144783020019531 milliseconds
-shell_sort took 1.0161399841308594 milliseconds
-merge_sort took 1.0406970977783203 milliseconds
-selection_sort took 9.809255599975586 milliseconds
-python_sort_function took 0.9996891021728516 milliseconds
+bubble_sort took 0.0 milliseconds
+quick_sort took 0.0 milliseconds
+insertion_sort took 19.4699764251709 milliseconds
+shell_sort took 0.9427070617675781 milliseconds
+merge_sort took 1.0488033294677734 milliseconds
+selection_sort took 5.047082901000977 milliseconds
+heap_sort_with_max_heapify took 1.306295394897461 milliseconds
+heap_sort_with_min_heapify took 1.0082721710205078 milliseconds
+python_sort_function took 0.0 milliseconds
 
 
 Testing the sorting algorithms on a large unsorted List:
-bubble_sort took 1.5571117401123047 milliseconds
-quick_sort took 1879.601240158081 milliseconds
-insertion_sort took 1.0437965393066406 milliseconds
-shell_sort took 18.454313278198242 milliseconds
-merge_sort took 24.295806884765625 milliseconds
-selection_sort took 1949.8867988586426 milliseconds
+bubble_sort took 1.001119613647461 milliseconds
+quick_sort took 1199.3467807769775 milliseconds
+insertion_sort took 0.0 milliseconds
+shell_sort took 14.018774032592773 milliseconds
+merge_sort took 13.35763931274414 milliseconds
+selection_sort took 1298.9754676818848 milliseconds
+heap_sort_with_max_heapify took 25.119543075561523 milliseconds
+heap_sort_with_min_heapify took 24.050474166870117 milliseconds
 python_sort_function took 0.0 milliseconds
 ```
 
