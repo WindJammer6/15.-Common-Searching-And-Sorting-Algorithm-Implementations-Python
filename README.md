@@ -34,7 +34,7 @@ Here are the common Searching and Sorting Algorithm Python implementations in th
 + [Comparing the time complexity of the various Searching and Sorting Algorithms with the pythonic way of searching and sorting elements in a list](#comparing)
         
 Notes: 
-- This compilation is not exhaustive and there are obviously other more advanced types of searching and sorting Algorithms that I feel are less beginner-friendly that I did not add to this compilation (e.g. Ternary Search Algorithm and Heap Sort Algorithm (improved Selection Sort Algorithm variation))  
+- This compilation is not exhaustive and there are obviously other more advanced types of searching and sorting Algorithms that I feel are less beginner-friendly that I did not add to this compilation (e.g. Ternary Search Algorithm)  
 - In these Searching and Sorting Algorithm implementations in Python, we will only be implementing them in such a way that they only work on Array Data Structures. It is definitely possible to use these Searching and Sorting Algorithms on other Data Structures depending on the requirements and characteristics of the data. (E.g. Binary Search Algorithm can also be used on sorted Linked List Data Structures and Binary Search Tree Data Structures (with some modifications) and Quick Sort can Algorithm can be used on Linked List Data Structures (with some modifications))
 - All the Sorting Algorithms can handle duplicates in the initital unsorted list
 
