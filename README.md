@@ -28,6 +28,8 @@ Here are the common Searching and Sorting Algorithm Python implementations in th
         -> [Shell Sort (Sorting Algorithm) (improved Insertion Sort Algorithm variation)](#shellsort)
       + [Merge Sort (Sorting Algorithm)](#mergesort)
       + [Selection Sort (Sorting Algorithm)](#selectionsort)
+      + [Heap Sort with Max Heapify (Sorting Algorithm)](#heapsortmaxheapify)
+      + [Heap Sort with Min Heapify (Sorting Algorithm)](#heapsortminheapify)
 
 + [Comparing the time complexity of the various Searching and Sorting Algorithms with the pythonic way of searching and sorting elements in a list](#comparing)
         
@@ -392,6 +394,100 @@ def selection_sort(number_list):
 
         if number_list[i] != number_list[minimum_element_index]:
             number_list[i], number_list[minimum_element_index] = number_list[minimum_element_index], number_list[i]
+```
+
+<br>
+
+<br>
+
+### [Heap Sort with Max Heapify (Sorting Algorithm)](https://github.com/WindJammer6/15.-Common-Searching-And-Sorting-Algorithm-Implementations-Python/blob/main/910.%20Heap_Sort_with_Max_Heapify_(Sorting_Algorithm).py)<a name = "heapsortmaxheapify"></a>
+Here are the functions available in the ['910. Heap_Sort_with_Max_Heapify_(Sorting_Algorithm).py'](https://github.com/WindJammer6/15.-Common-Searching-And-Sorting-Algorithm-Implementations-Python/blob/main/910.%20Heap_Sort_with_Max_Heapify_(Sorting_Algorithm).py) file:
++ max_heapify (function)
++ heap_sort_with_max_heapify (function)
+
+This implementation of Heap Sort with Max Heapify Algorithm is implemented recursively.
+ 
+Heap Sort with Max Heapify Algorithm code:
+```python
+def max_heapify(array, heap_size, index):
+    left_child_index = 2 * index + 1
+    right_child_index = 2 * index + 2
+    largest_index = index
+
+    if (
+        left_child_index < heap_size
+        and array[left_child_index] > array[largest_index]
+    ):
+        largest_index = left_child_index
+
+    if (
+        right_child_index < heap_size
+        and array[right_child_index] > array[largest_index]
+    ):
+        largest_index = right_child_index
+
+    if largest_index != index:
+        array[index], array[largest_index] = array[largest_index], array[index]
+        max_heapify(array, heap_size, largest_index)
+
+
+def heap_sort_with_max_heapify(array):
+    heap_size = len(array)
+
+    for index in range(heap_size // 2 - 1, -1, -1):
+        max_heapify(array, heap_size, index)
+
+    for last_element_index in range(len(array) - 1, 0, -1):
+        array[0], array[last_element_index] = array[last_element_index], array[0]
+        heap_size -= 1
+        max_heapify(array, heap_size, 0)
+```
+
+<br>
+
+<br>
+
+### [Heap Sort with Min Heapify (Sorting Algorithm)](https://github.com/WindJammer6/15.-Common-Searching-And-Sorting-Algorithm-Implementations-Python/blob/main/911.%20Heap_Sort_with_Min_Heapify_(Sorting_Algorithm).py)<a name = "heapsortminheapify"></a>
+Here are the functions available in the ['910. Heap_Sort_with_Min_Heapify_(Sorting_Algorithm).py'](https://github.com/WindJammer6/15.-Common-Searching-And-Sorting-Algorithm-Implementations-Python/blob/main/911.%20Heap_Sort_with_Min_Heapify_(Sorting_Algorithm).py) file:
++ min_heapify (function)
++ heap_sort_with_min_heapify (function)
+
+This implementation of Heap Sort with Min Heapify Algorithm is implemented recursively.
+ 
+Heap Sort with Min Heapify Algorithm code:
+```python
+def min_heapify(array, heap_size, index):
+    left_child_index = 2 * index + 1
+    right_child_index = 2 * index + 2
+    smallest_index = index
+
+    if (
+        left_child_index < heap_size
+        and array[left_child_index] < array[smallest_index]
+    ):
+        smallest_index = left_child_index
+
+    if (
+        right_child_index < heap_size
+        and array[right_child_index] < array[smallest_index]
+    ):
+        smallest_index = right_child_index
+
+    if smallest_index != index:
+        array[index], array[smallest_index] = array[smallest_index], array[index]
+        min_heapify(array, heap_size, smallest_index)
+
+
+def heap_sort_with_min_heapify(array):
+    heap_size = len(array)
+
+    for index in range(heap_size // 2 - 1, -1, -1):
+        min_heapify(array, heap_size, index)
+
+    for last_element_index in range(len(array) - 1, 0, -1):
+        array[0], array[last_element_index] = array[last_element_index], array[0]
+        heap_size -= 1
+        min_heapify(array, heap_size, 0)
 ```
 
 <br>
