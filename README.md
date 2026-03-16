@@ -400,7 +400,7 @@ def selection_sort(number_list):
 
 <br>
 
-### [Heap Sort with Max Heapify (Sorting Algorithm)](https://github.com/WindJammer6/15.-Common-Searching-And-Sorting-Algorithm-Implementations-Python/blob/main/910.%20Heap_Sort_with_Max_Heapify_(Sorting_Algorithm).py)<a name = "heapsortmaxheapify"></a>
+### [Heap Sort with Max Heapify (Sorting Algorithm) (improved Selection Sort Algorithm variation)](https://github.com/WindJammer6/15.-Common-Searching-And-Sorting-Algorithm-Implementations-Python/blob/main/910.%20Heap_Sort_with_Max_Heapify_(Sorting_Algorithm).py)<a name = "heapsortmaxheapify"></a>
 Here are the functions available in the ['910. Heap_Sort_with_Max_Heapify_(Sorting_Algorithm).py'](https://github.com/WindJammer6/15.-Common-Searching-And-Sorting-Algorithm-Implementations-Python/blob/main/910.%20Heap_Sort_with_Max_Heapify_(Sorting_Algorithm).py) file:
 + max_heapify (function)
 + heap_sort_with_max_heapify (function)
@@ -447,7 +447,7 @@ def heap_sort_with_max_heapify(array):
 
 <br>
 
-### [Heap Sort with Min Heapify (Sorting Algorithm)](https://github.com/WindJammer6/15.-Common-Searching-And-Sorting-Algorithm-Implementations-Python/blob/main/911.%20Heap_Sort_with_Min_Heapify_(Sorting_Algorithm).py)<a name = "heapsortminheapify"></a>
+### [Heap Sort with Min Heapify (Sorting Algorithm) (improved Selection Sort Algorithm variation)](https://github.com/WindJammer6/15.-Common-Searching-And-Sorting-Algorithm-Implementations-Python/blob/main/911.%20Heap_Sort_with_Min_Heapify_(Sorting_Algorithm).py)<a name = "heapsortminheapify"></a>
 Here are the functions available in the ['910. Heap_Sort_with_Min_Heapify_(Sorting_Algorithm).py'](https://github.com/WindJammer6/15.-Common-Searching-And-Sorting-Algorithm-Implementations-Python/blob/main/911.%20Heap_Sort_with_Min_Heapify_(Sorting_Algorithm).py) file:
 + min_heapify (function)
 + heap_sort_with_min_heapify (function)
