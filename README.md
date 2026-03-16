@@ -28,8 +28,8 @@ Here are the common Searching and Sorting Algorithm Python implementations in th
         -> [Shell Sort (Sorting Algorithm) (improved Insertion Sort Algorithm variation)](#shellsort)
       + [Merge Sort (Sorting Algorithm)](#mergesort)
       + [Selection Sort (Sorting Algorithm)](#selectionsort)
-      + [Heap Sort with Max Heapify (Sorting Algorithm)](#heapsortmaxheapify)
-      + [Heap Sort with Min Heapify (Sorting Algorithm)](#heapsortminheapify)
+         + [Heap Sort with Max Heapify (Sorting Algorithm)](#heapsortmaxheapify)
+         + [Heap Sort with Min Heapify (Sorting Algorithm)](#heapsortminheapify)
 
 + [Comparing the time complexity of the various Searching and Sorting Algorithms with the pythonic way of searching and sorting elements in a list](#comparing)
         
